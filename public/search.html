@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+      <style>
+      #events{
+        align-content: center;
+        margin-top: 40px; margin-left: 40%;
+    }
+    </style> 
+</head>
+<body>
+        <div class="navbar-fixed">
+                <nav>
+                  <div class="nav-wrapper teal lighten-2">
+                    <a href="#!" class="brand-logo center">City Tripping</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="badges.html">FAQ</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              
+    <div id="events">
+        <div>
+            <label>
+              <input class="with-gap" name="group3" type="radio" checked />
+              <span id="option1">Choice 1</span>
+            </label>  
+              <div class="col s12 m7">
+                    <h4 class="header">First Choice</h4>
+                    <div class="card horizontal">
+                      <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+     <div>
+            <label>
+              <input class="with-gap" name="group3" type="radio" checked />
+              <span id="option2">Choice 2</span>
+            </label>  
+              <div class="col s12 m7">
+                    <h4 class="header">Second Choice</h4>
+                    <div class="card horizontal">
+                      <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+     <div>
+            <label>
+              <input class="with-gap" name="group3" type="radio" checked />
+              <span id="option1">Choice 3</span>
+            </label>  
+              <div class="col s12 m7">
+                    <h4 class="header">Third Choice </Option></h4>
+                    <div class="card horizontal">
+                      <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                            
+    </div>
+          
+</body>
+<script>
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.yelp.com/v3/events?location=chicago&events=",
+  "method": "GET",
+  "headers": {
+    "Authorization": "Bearer PQpBSBJotEo3KXypxURXJyK6iMjPU_hnPN6QAkM_KpBz9p1eWO8030JZStfBC979NYecXbi3uWiDlfGYcEuafEXwbI1eSu2lSi2J4RB8JfyX_9bWg-7O6zG_QmqvXHYx",
+    "cache-control": "no-cache",
+    "Postman-Token": "39dbeccf-e340-4a45-8b23-3a0d4b1890b4"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+</script>
+</html>
