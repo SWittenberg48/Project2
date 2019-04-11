@@ -8,8 +8,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-// require("./contoller/api-routes.js")(app);
-// require("./controller/html-routes.js")(app);
+
+// require("./controller/api-routes.js")(app);
+require("./controller/html-routes")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
