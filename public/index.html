@@ -1,35 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Day Trippin</title>
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-         <style>
-         #start{
-             align-content: center;
-             margin-top: 40px; margin-left: 40%;
-         }
-         </style>   
-</head>
-<body>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../public/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      #start {
+        align-content: center;
+        margin-top: 40px;
+        margin-left: 40%;
+      }
+    </style>
+  </head>
+  <body class="initial">
     <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper teal lighten-2">
-            <a href="#!" class="brand-logo center">City Tripping</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="sass.html">Login</a></li>
-              <li><a href="badges.html">FAQ</a></li>
-            </ul>
-          </div>
-        </nav>
+      <nav>
+        <div class="nav-wrapper teal lighten-2">
+          <a href="#!" class="brand-logo center">City Tripping</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Login</a></li>
+            <li><a href="badges.html">FAQ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <form>
+      <div class="form-group row">
+        <div class="col-7">
+          <input
+            type="text"
+            name="addy"
+            class="form-control"
+            id="startAddress"
+            placeholder="city, state"
+          />
+        </div>
+        <!-- <div class="col-3">
+          <select class="custom-select " id="themes">
+            <option selected>Trip Themes</option>
+            <option id="radius" value="2">Landmarks</option>
+            <option id="radius" value="3">Food</option>
+            <option id="radius" value="4">Alcohol</option>
+          </select>
+        </div> -->
+        <div class="col-2">
+          <button id="doItGeocode" type="button" class="btn btn-outline-light">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
       </div>
-      <div id=start>
-        <a class="waves-effect waves-light btn-large">Get Ready to Take a Trip</a>
-      </div>
-</body>
+    </form>
+    <div id="start">
+      <a class="waves-effect waves-light btn-large">Get Ready to Take a Trip</a>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <div class="footer navbar-fixed-bottom" id="footer">
+      Built by Scott + Kyle + Dave + Stephen
+    </div>
+  </body>
 </html>
