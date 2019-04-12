@@ -2,11 +2,12 @@ var express = require("express");
 var app = express();
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
+var path = require("path");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("./app/public"));
+app.use(express.static(path.join(__dirname, "./app/public")));
 
 // require("./controller/api-routes.js")(app);
 require("./controller/html-routes")(app);
