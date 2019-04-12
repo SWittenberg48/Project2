@@ -7,7 +7,7 @@ var path = require("path");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "./public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // require("./controller/api-routes.js")(app);
 require("./controller/html-routes")(app);
