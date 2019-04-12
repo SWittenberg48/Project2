@@ -42,7 +42,7 @@
                         <img src="https://lorempixel.com/100/190/nature/6">
                       </div>
                       <div class="card-stacked">
-                        <div class="card-content">
+                        <div class="card-content" id="firstChoice">
                           <p>I am a very simple card. I am good at containing small bits of information.</p>
                         </div>
                         </div>
@@ -88,23 +88,16 @@
                     </div>
                   </div>                            
     </div>
-          
+    $ curl -X POST -H "Authorization: Bearer PQpBSBJotEo3KXypxURXJyK6iMjPU_hnPN6QAkM_KpBz9p1eWO8030JZStfBC979NYecXbi3uWiDlfGYcEuafEXwbI1eSu2lSi2J4RB8JfyX_9bWg-7O6zG_QmqvXHYx" -H "Content-Type: application/graphql" https://api.yelp.com/v3/graphql --data '
+    {
+        business(id: "Yolk-Chicago") {
+          photos  
+          name
+          id
+          display_phone
+          alias
+          rating
+        }
+    }'  
 </body>
-<script>
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://api.yelp.com/v3/events?location=chicago&events=",
-  "method": "GET",
-  "headers": {
-    "Authorization": "Bearer PQpBSBJotEo3KXypxURXJyK6iMjPU_hnPN6QAkM_KpBz9p1eWO8030JZStfBC979NYecXbi3uWiDlfGYcEuafEXwbI1eSu2lSi2J4RB8JfyX_9bWg-7O6zG_QmqvXHYx",
-    "cache-control": "no-cache",
-    "Postman-Token": "39dbeccf-e340-4a45-8b23-3a0d4b1890b4"
-  }
-}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
-</script>
 </html>
