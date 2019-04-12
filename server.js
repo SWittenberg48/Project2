@@ -4,7 +4,7 @@ var passport = require("passport");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var env = require("dotenv").load();
-var exphbs = require("expess-handlebars");
+var exphbs = require("express-handlebars");
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
