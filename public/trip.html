@@ -87,9 +87,12 @@
                     </div>
                   </div>
                   <hr> 
-                  <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Next</button>                            
+                  <button onclick="secondChoice()" class="btn waves-effect waves-light btn-large" type="submit" name="action">Next</button>                            
     </form>
    <script>
+    
+    //  Function to display the First choices of their City Trip
+     function firstChoice(){
   var choiceOne = [
     "Navy Pier",
     "3,300-foot-long pier on the Chicago shoreline of Lake Michigan",
@@ -125,7 +128,87 @@
     for(var i=0; i<choiceThree.length;i++){
       var newOption = $("<p>"+choiceThree[i]+"</p>");
       optionThree.append(newOption);
-      }     
+      }
+  }
+  // firstChoice();
+
+  // function to display the second options of their city trip.
+  function secondChoice(){
+  var choiceOne = [
+    "Purple Pig",
+    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+    "Address: 500 N Michigan Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceOne);
+   var optionOne = $("#optionOne");
+    for(var i=0; i<choiceOne.length;i++){
+      var newOption = $("<p>"+choiceOne[i]+"</p>");
+      optionOne.append(newOption);
+      }
+  
+  var choiceTwo = [
+  "Gibson's Bar",
+    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+    "Address: 1028 N Rush Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceTwo);
+   var optionTwo = $("#optionTwo");
+    for(var i=0; i<choiceTwo.length;i++){
+      var newOption = $("<p>"+choiceTwo[i]+"</p>");
+      optionTwo.append(newOption);
+      }
+      
+  var choiceThree = [
+     "Tempo Cafe",
+     "A full menu is served around the clock & it's BYO booze until 10 PM.",
+    "Address: 6 E Chestnut St, Chicago, IL 60611"
+   ];
+   console.log(choiceThree);
+   var optionThree = $("#optionThree");
+    for(var i=0; i<choiceThree.length;i++){
+      var newOption = $("<p>"+choiceThree[i]+"</p>");
+      optionThree.append(newOption);
+      }
+  } 
+  secondChoice(); 
+
+  function thirdChoice(){
+  var choiceOne = [
+    "Purple Pig",
+    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+    "Address: 500 N Michigan Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceOne);
+   var optionOne = $("#optionOne");
+    for(var i=0; i<choiceOne.length;i++){
+      var newOption = $("<p>"+choiceOne[i]+"</p>");
+      optionOne.append(newOption);
+      }
+  
+  var choiceTwo = [
+  "Gibson's Bar",
+    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+    "Address: 1028 N Rush Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceTwo);
+   var optionTwo = $("#optionTwo");
+    for(var i=0; i<choiceTwo.length;i++){
+      var newOption = $("<p>"+choiceTwo[i]+"</p>");
+      optionTwo.append(newOption);
+      }
+      
+  var choiceThree = [
+     "Tempo Cafe",
+     "A full menu is served around the clock & it's BYO booze until 10 PM.",
+    "Address: 6 E Chestnut St, Chicago, IL 60611"
+   ];
+   console.log(choiceThree);
+   var optionThree = $("#optionThree");
+    for(var i=0; i<choiceThree.length;i++){
+      var newOption = $("<p>"+choiceThree[i]+"</p>");
+      optionThree.append(newOption);
+      }
+  }       
    </script>
 </body>
 </html>
