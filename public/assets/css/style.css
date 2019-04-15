@@ -38,3 +38,12 @@ body.initial {
   color: white;
   font-size: 10px;
 }
+#instruct{
+  
+  margin-top: 10px; margin-left: 25%;
+}
+#events{
+  margin-top:30px;
+  margin-left: 30%;
+
+}
