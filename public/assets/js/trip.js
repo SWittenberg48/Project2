@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var firstChoice = [];
 var secondChoice = [];
 var thirdChoice = [];
@@ -129,7 +128,6 @@ $("#next").click(secondChoice(){
   
 
 // when we hit start tripping we run the yelp NPM package 3 times and only display the first one
-=======
 $(document).ready(function() {
     
 
@@ -209,4 +207,3 @@ $(document).ready(function() {
 
 
 }
->>>>>>> a7079215e7a92bf3361746e00d3bc22a067dd97a
