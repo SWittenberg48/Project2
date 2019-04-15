@@ -4,7 +4,7 @@ Start Tripping Today
 
 ## Live Preview
 
-- [ResourceFoods](https://thawing-depths-11355.herokuapp.com/)
+- [City Tripping](https://thawing-depths-11355.herokuapp.com/)
 
 ## Authors
 
@@ -38,6 +38,9 @@ City Tripping is a comprehensive itinerary planner for the top food, events, and
 - MysQl
 
 ### Testing
+
+- Mocha
+- Chai
 
 ### Deployment
 
