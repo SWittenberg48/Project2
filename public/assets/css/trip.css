@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  background-image: url(../images/skylineChicago.jpg);
+  /* height: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* color: white; */
+  font-family: "Pacifico", cursive;
+}
+#howToUse{
+    margin-top: 10px; margin-left: 15%;
+}
+#instruct{
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+}
+.option{
+    color: black;
+}
+.option3{
+    color:white;
+}
