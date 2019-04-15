@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trip Options</title>
+    <title>Trip Details</title>
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <!-- Compiled and minified JavaScript -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="assets/css/style.css" />
-      <!-- <link rel="stylesheet" href="assets/css/animate.min.css" /> -->
+      <link rel="stylesheet" href="assets/css/trip.css" />
+      <link rel="stylesheet" href="assets/css/animate.min.css" />
 </head>
 <body>
         <div class="navbar-fixed">
@@ -19,73 +20,75 @@
                   <div class="nav-wrapper teal lighten-2">
                     <a href="#!" class="brand-logo center">City Tripping</a>
                     <ul class="right hide-on-med-and-down">
-                      <li><a href="badges.html">FAQ</a></li>
+                      <li><a href="login.html">Login</a></li>
                     </ul>
                   </div>
                 </nav>
               </div>
-        <div>
-       <div id="instruct">
-         <p>Building your City Trip is easy, just select one of the options below to add it to the itinerary.</p>
-       </div>
-
-
+    <div id="howToUse">
+      <p id="instruct">Building your City Trip is easy, just select one of the options below to add it to the itinerary.</p>
+    </div>          
     <form id="events">
         <div>
             <label>
-              <input class="with-gap" name="group3" type="radio" checked />
-              <span id="option1">I like this</span>
+              <input class="with-gap" name="group3" type="radio" />
+              <span class="option">I like this</span>
             </label>  
-            <div class="row">
-              <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                  <div class="card-content white-text">
-                    <span class="card-title">Option One</span>
-                    <p id="opOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa mollitia sunt dolor praesentium repellendus incidunt repudiandae quod iusto eaque natus dolorem eveniet earum nulla similique vitae, odit accusamus? Aut.</p>
+              <div class="col s12 m7">
+                    <h4 class="header">First Choice</h4>
+                    <div class="card horizontal">
+                      <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content" id="firstChoice">
+                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
      <div>
             <label>
-              <input class="with-gap" name="group3" type="radio" checked />
-              <span id="option2">I like this</span>
+              <input class="with-gap" name="group3" type="radio" />
+              <span class="option">I like this</span>
             </label>  
-            <div class="row">
-              <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                  <div class="card-content white-text" id="option2" >
-                    <span class="card-title">Option two</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+              <div class="col s12 m7">
+                    <h4 class="header">Second Choice</h4>
+                    <div class="card horizontal">
+                      <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
      <div>
             <label>
-              <input class="with-gap" name="group3" type="radio" checked />
-              <span id="option3">I like this</span>
+              <input class="with-gap" name="group3" type="radio" />
+              <span class="option3">I like this</span>
             </label>  
-            <div class="row">
-              <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                  <div class="card-content white-text" id="option3">
-                    <span class="card-title">Option 3</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+              <div class="col s12 m7">
+                    <h4 class="header">Third Choice </Option></h4>
+                    <div class="card horizontal">
+                      <div class="card-image">
+                        <img src="https://lorempixel.com/100/190/nature/6">
+                      </div>
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <hr>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Next</button>                             
-          </form>
-    <script>
-    
-      
-//      
-    </script>
-     
+                  <hr> 
+                  <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Next</button>                            
+    </form>
+   
 </body>
 </html>
