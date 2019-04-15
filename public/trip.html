@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Trip Details</title>
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <!-- Compiled and minified JavaScript -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-      <style>
-      #events{
-        align-content: center;
-        margin-top: 40px; margin-left: 40%;
-    }
-    </style> 
+      <link rel="stylesheet" href="assets/css/trip.css" />
+      <!-- <link rel="stylesheet" href="assets/css/animate.min.css" /> -->
 </head>
 <body>
         <div class="navbar-fixed">
@@ -23,17 +20,19 @@
                   <div class="nav-wrapper teal lighten-2">
                     <a href="#!" class="brand-logo center">City Tripping</a>
                     <ul class="right hide-on-med-and-down">
-                      <li><a href="badges.html">FAQ</a></li>
+                      <li><a href="login.html">Login</a></li>
                     </ul>
                   </div>
                 </nav>
               </div>
-              
-    <div id="events">
+    <div id="howToUse">
+      <p id="instruct">Building your City Trip is easy, just select one of the options below to add it to the itinerary.</p>
+    </div>          
+    <form id="events">
         <div>
             <label>
-              <input class="with-gap" name="group3" type="radio" checked />
-              <span id="option1">Choice 1</span>
+              <input class="with-gap" name="group3" type="radio" />
+              <span class="option">I like this</span>
             </label>  
               <div class="col s12 m7">
                     <h4 class="header">First Choice</h4>
@@ -42,8 +41,8 @@
                         <img src="https://lorempixel.com/100/190/nature/6">
                       </div>
                       <div class="card-stacked">
-                        <div class="card-content" id="firstChoice">
-                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        <div class="card-content">
+                        <p id="optionOne"></p>  
                         </div>
                         </div>
                       </div>
@@ -51,8 +50,8 @@
                   </div>
      <div>
             <label>
-              <input class="with-gap" name="group3" type="radio" checked />
-              <span id="option2">Choice 2</span>
+              <input class="with-gap" name="group3" type="radio" />
+              <span class="option">I like this</span>
             </label>  
               <div class="col s12 m7">
                     <h4 class="header">Second Choice</h4>
@@ -62,7 +61,7 @@
                       </div>
                       <div class="card-stacked">
                         <div class="card-content">
-                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                          <p id="optionTwo"></p>
                         </div>
                         </div>
                       </div>
@@ -70,8 +69,8 @@
                   </div>
      <div>
             <label>
-              <input class="with-gap" name="group3" type="radio" checked />
-              <span id="option1">Choice 3</span>
+              <input class="with-gap" name="group3" type="radio" />
+              <span class="option3">I like this</span>
             </label>  
               <div class="col s12 m7">
                     <h4 class="header">Third Choice </Option></h4>
@@ -81,23 +80,135 @@
                       </div>
                       <div class="card-stacked">
                         <div class="card-content">
-                          <p>I am a very simple card. I am good at containing small bits of information.</p>
+                          <p id="optionThree"></p>
                         </div>
                         </div>
                       </div>
                     </div>
-                  </div>                            
-    </div>
-    $ curl -X POST -H "Authorization: Bearer PQpBSBJotEo3KXypxURXJyK6iMjPU_hnPN6QAkM_KpBz9p1eWO8030JZStfBC979NYecXbi3uWiDlfGYcEuafEXwbI1eSu2lSi2J4RB8JfyX_9bWg-7O6zG_QmqvXHYx" -H "Content-Type: application/graphql" https://api.yelp.com/v3/graphql --data '
-    {
-        business(id: "Yolk-Chicago") {
-          photos  
-          name
-          id
-          display_phone
-          alias
-          rating
-        }
-    }'  
+                  </div>
+                  <hr> 
+                  <button onclick="secondChoice()" class="btn waves-effect waves-light btn-large" type="submit" name="action">Next</button>                            
+    </form>
+   <script>
+    
+    //  Function to display the First choices of their City Trip
+     function firstChoice(){
+  var choiceOne = [
+    "Navy Pier",
+    "3,300-foot-long pier on the Chicago shoreline of Lake Michigan",
+    "It is located in the Streeterville neighborhood of the Near North Side community area.",
+    "Address: 600 E Grand Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceOne);
+   var optionOne = $("#optionOne");
+    for(var i=0; i<choiceOne.length;i++){
+      var newOption = $("<p>"+choiceOne[i]+"</p>");
+      optionOne.append(newOption);
+      }
+  
+  var choiceTwo = [
+     "Cloud Gate",
+     "Affectionately called, “The Bean” and what has become synonymous with the Chicago experience is Anish Kapoor’s Cloud Gate",
+
+   ];
+   console.log(choiceTwo);
+   var optionTwo = $("#optionTwo");
+    for(var i=0; i<choiceTwo.length;i++){
+      var newOption = $("<p>"+choiceTwo[i]+"</p>");
+      optionTwo.append(newOption);
+      }
+      
+  var choiceThree = [
+     "Bucktinham Fountain",
+     "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world",
+
+   ];
+   console.log(choiceThree);
+   var optionThree = $("#optionThree");
+    for(var i=0; i<choiceThree.length;i++){
+      var newOption = $("<p>"+choiceThree[i]+"</p>");
+      optionThree.append(newOption);
+      }
+  }
+  // firstChoice();
+
+  // function to display the second options of their city trip.
+  function secondChoice(){
+  var choiceOne = [
+    "Purple Pig",
+    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+    "Address: 500 N Michigan Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceOne);
+   var optionOne = $("#optionOne");
+    for(var i=0; i<choiceOne.length;i++){
+      var newOption = $("<p>"+choiceOne[i]+"</p>");
+      optionOne.append(newOption);
+      }
+  
+  var choiceTwo = [
+  "Gibson's Bar",
+    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+    "Address: 1028 N Rush Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceTwo);
+   var optionTwo = $("#optionTwo");
+    for(var i=0; i<choiceTwo.length;i++){
+      var newOption = $("<p>"+choiceTwo[i]+"</p>");
+      optionTwo.append(newOption);
+      }
+      
+  var choiceThree = [
+     "Tempo Cafe",
+     "A full menu is served around the clock & it's BYO booze until 10 PM.",
+    "Address: 6 E Chestnut St, Chicago, IL 60611"
+   ];
+   console.log(choiceThree);
+   var optionThree = $("#optionThree");
+    for(var i=0; i<choiceThree.length;i++){
+      var newOption = $("<p>"+choiceThree[i]+"</p>");
+      optionThree.append(newOption);
+      }
+  } 
+  secondChoice(); 
+
+  function thirdChoice(){
+  var choiceOne = [
+    "Purple Pig",
+    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+    "Address: 500 N Michigan Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceOne);
+   var optionOne = $("#optionOne");
+    for(var i=0; i<choiceOne.length;i++){
+      var newOption = $("<p>"+choiceOne[i]+"</p>");
+      optionOne.append(newOption);
+      }
+  
+  var choiceTwo = [
+  "Gibson's Bar",
+    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+    "Address: 1028 N Rush Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceTwo);
+   var optionTwo = $("#optionTwo");
+    for(var i=0; i<choiceTwo.length;i++){
+      var newOption = $("<p>"+choiceTwo[i]+"</p>");
+      optionTwo.append(newOption);
+      }
+      
+  var choiceThree = [
+     "Tempo Cafe",
+     "A full menu is served around the clock & it's BYO booze until 10 PM.",
+    "Address: 6 E Chestnut St, Chicago, IL 60611"
+   ];
+   console.log(choiceThree);
+   var optionThree = $("#optionThree");
+    for(var i=0; i<choiceThree.length;i++){
+      var newOption = $("<p>"+choiceThree[i]+"</p>");
+      optionThree.append(newOption);
+      }
+  }       
+   </script>
 </body>
 </html>
