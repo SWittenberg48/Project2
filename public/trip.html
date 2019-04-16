@@ -60,15 +60,6 @@
           </div>
         </div>
       </div>
-      <hr />
-      <button
-        class="btn waves-effect waves-light btn-large"
-        type="submit"
-        name="action"
-        id="user-choice"
-      >
-        Next
-      </button>
     </div>
     <!-- second radial -->
     <div class="col s12 m7">
@@ -87,15 +78,6 @@
           </div>
         </div>
       </div>
-      <hr />
-      <button
-        class="btn waves-effect waves-light btn-large"
-        type="submit"
-        name="action"
-        id="user-choice"
-      >
-        Next
-      </button>
     </div>
     <!-- third radial button -->
     <div class="col s12 m7">
@@ -153,7 +135,7 @@
         }
 
         var choiceThree = [
-          "Bucktinham Fountain",
+          "Buckingham Fountain",
           "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world"
         ];
         console.log(choiceThree);
@@ -212,7 +194,7 @@
         var userData = $("input[type='radio']:checked")
           .parent()
           .parent()
-          .find("#optionThree")
+          .find(".dbInfo")
           .text();
 
         console.log(userData);
