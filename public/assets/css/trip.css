@@ -22,7 +22,7 @@ body{
     color:black;
 }
 #events{
-  margin: 50px;
+  margin-top: 40px; margin-right: 50px;margin-bottom: 20px; margin-left: 50px;
 }
 
 .option{
