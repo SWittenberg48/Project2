@@ -28,153 +28,136 @@
     <div id="howToUse">
       <p id="instruct">Building your City Trip is easy, just select one of the options below to add it to the itinerary.</p>
     </div>          
-    <form id="events">
-        <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h4 class="header">First Choice</h4>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                        <p class="info" id="optionOne"></p>  
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-     <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h4 class="header">Second Choice</h4>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p class="info" id="optionTwo"></p>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-     <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h4 class="header">Third Choice </Option></h4>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p class="info" id="optionThree"></p>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr> 
-                            
-    </form>
-    <a href="itinerary.html"><button id="nextInfo" class="btn-floating btn-large pulse" type="submit" name="action">Trip</button></a>
-
+    <div class="info col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option1">I like this</span>
+      </label>
+      <h5 class="header">First Choice</h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionOne" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      
+    <!-- second radial -->
+    <div class="col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option2">I like this</span>
+      </label>
+      <h5 class="header">Second Choice</h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionTwo" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      
+    <!-- working radial button -->
+    <div class="col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option3">I like this</span>
+      </label>
+      <h5 class="header3">Third Choice</h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionThree" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <a href="itinerary.html">
+      <button
+        class="btn-floating btn-large pulse"
+        type="submit"
+        name="action"
+        id="user-choice"
+      >
+        Trip
+      </button></a>
+    </div>
+  
     <script>
 
-$(document).ready(function(){
-       thirdChoice();
-});
+      // function to display the second options of their city trip.
+      function secondChoice() {
+        var choiceOne = [
+          "Purple Pig",
+          "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+          "Address: 500 N Michigan Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceOne);
+        var optionOne = $("#optionOne");
+        for (var i = 0; i < choiceOne.length; i++) {
+          var newOption = $("<p>" + choiceOne[i] + "</p>");
+          optionOne.append(newOption);
+        }
 
-function secondChoice(){
-  var choiceOne = [
-    "Purple Pig",
-    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
-    "Address: 500 N Michigan Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceOne);
-   var optionOne = $("#optionOne");
-    for(var i=0; i<choiceOne.length;i++){
-      var newOption = $("<p>"+choiceOne[i]+"</p>");
-      optionOne.append(newOption);
-      }
-  
-  var choiceTwo = [
-  "Gibson's Bar",
-    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
-    "Address: 1028 N Rush Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceTwo);
-   var optionTwo = $("#optionTwo");
-    for(var i=0; i<choiceTwo.length;i++){
-      var newOption = $("<p>"+choiceTwo[i]+"</p>");
-      optionTwo.append(newOption);
-      }
-      
-  var choiceThree = [
-     "Tempo Cafe",
-     "A full menu is served around the clock & it's BYO booze until 10 PM.",
-    "Address: 6 E Chestnut St, Chicago, IL 60611"
-   ];
-   console.log(choiceThree);
-   var optionThree = $("#optionThree");
-    for(var i=0; i<choiceThree.length;i++){
-      var newOption = $("<p>"+choiceThree[i]+"</p>");
-      optionThree.append(newOption);
-      }
-  }
-  
-  function thirdChoice(){
-  var choiceOne = [
-    "Navy Pier",
-    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
-    "Address: 500 N Michigan Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceOne);
-   var optionOne = $("#optionOne");
-    for(var i=0; i<choiceOne.length;i++){
-      var newOption = $("<p>"+choiceOne[i]+"</p>");
-      optionOne.append(newOption);
-      }
-  
-  var choiceTwo = [
-  "Cloud Gate",
-    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
-    "Address: 1028 N Rush Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceTwo);
-   var optionTwo = $("#optionTwo");
-    for(var i=0; i<choiceTwo.length;i++){
-      var newOption = $("<p>"+choiceTwo[i]+"</p>");
-      optionTwo.append(newOption);
-      }
-      
-  var choiceThree = [
-     "Willis Tower",
-     "A full menu is served around the clock & it's BYO booze until 10 PM.",
-    "Address: 6 E Chestnut St, Chicago, IL 60611"
-   ];
-   console.log(choiceThree);
-   var optionThree = $("#optionThree");
-    for(var i=0; i<choiceThree.length;i++){
-      var newOption = $("<p>"+choiceThree[i]+"</p>");
-      optionThree.append(newOption);
-      }
-  } 
+        var choiceTwo = [
+          "Gibson's Bar",
+          "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+          "Address: 1028 N Rush Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceTwo);
+        var optionTwo = $("#optionTwo");
+        for (var i = 0; i < choiceTwo.length; i++) {
+          var newOption = $("<p>" + choiceTwo[i] + "</p>");
+          optionTwo.append(newOption);
+        }
 
+        var choiceThree = [
+          "Tempo Cafe",
+          "A full menu is served around the clock & it's BYO booze until 10 PM.",
+          "Address: 6 E Chestnut St, Chicago, IL 60611"
+        ];
+        console.log(choiceThree);
+        var optionThree = $("#optionThree");
+        for (var i = 0; i < choiceThree.length; i++) {
+          var newOption = $("<p>" + choiceThree[i] + "</p>");
+          optionThree.append(newOption);
+        }
+      }
+      secondChoice();
     </script>
-    <!-- <script src="assets/js/trip.js" type="text/javascipt"></script> -->
-   
-</body>
+    <script>
+      //  instead of group1 #user-choice
+      $("#user-choice").on("click", function() {
+        //  alert("hello");
+        var userData = $("input[type='radio']:checked")
+          .parent()
+          .parent()
+          .find(".dbInfo")
+          .text();
+        
+        
+        console.log(userData);
+        
+        
+
+        //     $.ajax({
+        //    type:"POST",
+        //    url: "/save",
+        //    data: {userData}
+        //  }).then(function(data){
+        //    console.log("data");
+
+        //  })
+      });
+    </script>
+  </body>
 </html>

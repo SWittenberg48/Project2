@@ -21,17 +21,24 @@ body{
     font-weight: bold;
     color:black;
 }
-#events{
-  margin-top: 40px; margin-right: 50px;margin-bottom: 20px; margin-left: 50px;
-}
 
-.option{
+.option1{
     color: black;
 }
+.option2{
+  color: black;
+}
+.header3{
+  color: white
+}
+.option3{
+  color: white;
+}
 .info{
+  margin-right: 40px; margin-left: 40px;
   font-family: cursive;
 
 }
-#nextInfo{
-  margin-left: 100px;
+#user-choice{
+  margin-left: 80px;
 }

@@ -30,7 +30,7 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper teal lighten-2">
-          <a href="#!" class="brand-logo center">City Tripping</a>
+          <a href="index.html" class="brand-logo center">City Tripping</a>
           <ul class="right hide-on-med-and-down">
             <li><a href="login.html">Login</a></li>
           </ul>
@@ -43,13 +43,14 @@
         add it to the itinerary.
       </p>
     </div>
+  
     <!-- first radial -->
-    <div class="col s12 m7">
+    <div class="info col s12 m7">
       <label>
         <input class="with-gap" name="group3" type="radio" />
         <span class="option1">I like this</span>
       </label>
-      <h4 class="header">Third Choice</h4>
+      <h5 class="header">First Choice</h5>
       <div class="card horizontal">
         <div class="card-image">
           <img src="https://lorempixel.com/100/190/nature/6" />
@@ -60,23 +61,14 @@
           </div>
         </div>
       </div>
-      <hr />
-      <button
-        class="btn waves-effect waves-light btn-large"
-        type="submit"
-        name="action"
-        id="user-choice"
-      >
-        Next
-      </button>
-    </div>
+      
     <!-- second radial -->
     <div class="col s12 m7">
       <label>
         <input class="with-gap" name="group3" type="radio" />
         <span class="option2">I like this</span>
       </label>
-      <h4 class="header">Third Choice</h4>
+      <h5 class="header">Second Choice</h5>
       <div class="card horizontal">
         <div class="card-image">
           <img src="https://lorempixel.com/100/190/nature/6" />
@@ -87,23 +79,14 @@
           </div>
         </div>
       </div>
-      <hr />
-      <button
-        class="btn waves-effect waves-light btn-large"
-        type="submit"
-        name="action"
-        id="user-choice"
-      >
-        Next
-      </button>
-    </div>
+      
     <!-- working radial button -->
     <div class="col s12 m7">
       <label>
         <input class="with-gap" name="group3" type="radio" />
         <span class="option3">I like this</span>
       </label>
-      <h4 class="header">Third Choice</h4>
+      <h5 class="header3">Third Choice</h5>
       <div class="card horizontal">
         <div class="card-image">
           <img src="https://lorempixel.com/100/190/nature/6" />
@@ -115,55 +98,18 @@
         </div>
       </div>
       <hr />
+      <a href="event.html">
       <button
-        class="btn waves-effect waves-light btn-large"
+        class="btn-floating btn-large pulse"
         type="submit"
         name="action"
         id="user-choice"
       >
         Next
-      </button>
+      </button></a>
     </div>
-
+  
     <script>
-      //  Function to display the First choices of their City Trip
-      function firstChoice() {
-        var choiceOne = [
-          "Navy Pier",
-          "3,300-foot-long pier on the Chicago shoreline of Lake Michigan",
-          "It is located in the Streeterville neighborhood of the Near North Side community area.",
-          "Address: 600 E Grand Ave, Chicago, IL 60611"
-        ];
-        console.log(choiceOne);
-        var optionOne = $("#optionOne");
-        for (var i = 0; i < choiceOne.length; i++) {
-          var newOption = $("<p>" + choiceOne[i] + "</p>");
-          optionOne.append(newOption);
-        }
-
-        var choiceTwo = [
-          "Cloud Gate",
-          "Affectionately called, “The Bean” and what has become synonymous with the Chicago experience is Anish Kapoor’s Cloud Gate"
-        ];
-        console.log(choiceTwo);
-        var optionTwo = $("#optionTwo");
-        for (var i = 0; i < choiceTwo.length; i++) {
-          var newOption = $("<p>" + choiceTwo[i] + "</p>");
-          optionTwo.append(newOption);
-        }
-
-        var choiceThree = [
-          "Bucktinham Fountain",
-          "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world"
-        ];
-        console.log(choiceThree);
-        var optionThree = $("#optionThree");
-        for (var i = 0; i < choiceThree.length; i++) {
-          var newOption = $("<p>" + choiceThree[i] + "</p>");
-          optionThree.append(newOption);
-        }
-      }
-      // firstChoice();
 
       // function to display the second options of their city trip.
       function secondChoice() {
@@ -212,10 +158,13 @@
         var userData = $("input[type='radio']:checked")
           .parent()
           .parent()
-          .find("#optionThree")
+          .find(".dbInfo")
           .text();
-
+        
+        
         console.log(userData);
+        
+        
 
         //     $.ajax({
         //    type:"POST",
