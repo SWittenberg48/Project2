@@ -8,6 +8,7 @@ const client = yelp.client(
 // console.log("hello", yelp);
 // yelp();
 // User Authentication Routes
+
 module.exports = function(app) {
   app.get("/", function(req, res) {
     res.send("Welcome to Passport with Sequelize");
@@ -16,10 +17,10 @@ module.exports = function(app) {
   //   if (!err) console.log("Site is live");
   //   else console.log(err);
   // });
-  app.get("/yelp", function(req, res) {
+  app.post("/yelp", function(req, res) {
     client
       .search({
-        location: "chicago",
+        location: currentCity,
         limit: 3
       })
       .then(response => {

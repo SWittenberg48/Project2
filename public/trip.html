@@ -108,6 +108,17 @@
     </div>
 
     <script>
+      var currentCity = sessionStorage.getItem("city");
+      $.post(
+        "/yelp",
+        {
+          city: currentCity
+        },
+        function(userOptions) {
+          console.log(userOptions);
+        }
+      );
+      console.log(currentCity);
       //  Function to display the First choices of their City Trip
       function firstChoice() {
         var choiceOne = [];
@@ -194,14 +205,13 @@
 
         console.log(userData);
 
-        //     $.ajax({
-        //    type:"POST",
-        //    url: "/save",
-        //    data: {userData}
-        //  }).then(function(data){
-        //    console.log("data");
-
-        //  })
+        $.ajax({
+          type: "POST",
+          url: "/save",
+          data: { userData }
+        }).then(function(data) {
+          console.log("data");
+        });
       });
     </script>
   </body>
