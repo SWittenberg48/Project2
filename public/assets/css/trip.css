@@ -28,6 +28,10 @@ body{
 .option{
     color: black;
 }
-.option3{
-    color:white;
+.info{
+  font-family: cursive;
+
+}
+#nextInfo{
+  margin-left: 100px;
 }

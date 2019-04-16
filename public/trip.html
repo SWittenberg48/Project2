@@ -35,14 +35,14 @@
               <span class="option">I like this</span>
             </label>  
               <div class="col s12 m7">
-                    <h4 class="header">First Choice</h4>
+                    <h5 class="header">First Choice</h5>
                     <div class="card horizontal">
                       <div class="card-image">
                         <img src="https://lorempixel.com/100/190/nature/6">
                       </div>
                       <div class="card-stacked">
                         <div class="card-content">
-                        <p id="optionOne"></p>  
+                        <p class="info" id="optionOne"></p>  
                         </div>
                         </div>
                       </div>
@@ -54,14 +54,14 @@
               <span class="option">I like this</span>
             </label>  
               <div class="col s12 m7">
-                    <h4 class="header">Second Choice</h4>
+                    <h5 class="header">Second Choice</h5>
                     <div class="card horizontal">
                       <div class="card-image">
                         <img src="https://lorempixel.com/100/190/nature/6">
                       </div>
                       <div class="card-stacked">
                         <div class="card-content">
-                          <p id="optionTwo"></p>
+                          <p class="info" id="optionTwo"></p>
                         </div>
                         </div>
                       </div>
@@ -70,17 +70,17 @@
      <div>
             <label>
               <input class="with-gap" name="group3" type="radio" />
-              <span class="option3">I like this</span>
+              <span class="option">I like this</span>
             </label>  
               <div class="col s12 m7">
-                    <h4 class="header">Third Choice </Option></h4>
+                    <h5 class="header">Third Choice </Option></h5>
                     <div class="card horizontal">
                       <div class="card-image">
                         <img src="https://lorempixel.com/100/190/nature/6">
                       </div>
                       <div class="card-stacked">
                         <div class="card-content">
-                          <p id="optionThree"></p>
+                          <p class="info" id="optionThree"></p>
                         </div>
                         </div>
                       </div>
@@ -88,7 +88,7 @@
                   </div>
                   <hr>            
     </form>
-    <a href="event.html"><button id="nextInfo" class="btn waves-effect waves-light btn-large" type="submit" name="action">Next</button></a>
+    <a href="event.html"><button id="nextInfo" class="btn-floating btn-large pulse" type="submit" name="action">Next</button></a>
 
     <script>
     $(document).ready(function(){
@@ -135,43 +135,7 @@ function secondChoice(){
       }
   }
   
-  function thirdChoice(){
-  var choiceOne = [
-    "Purple Pig",
-    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
-    "Address: 500 N Michigan Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceOne);
-   var optionOne = $("#optionOne");
-    for(var i=0; i<choiceOne.length;i++){
-      var newOption = $("<p>"+choiceOne[i]+"</p>");
-      optionOne.append(newOption);
-      }
   
-  var choiceTwo = [
-  "Gibson's Bar",
-    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
-    "Address: 1028 N Rush Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceTwo);
-   var optionTwo = $("#optionTwo");
-    for(var i=0; i<choiceTwo.length;i++){
-      var newOption = $("<p>"+choiceTwo[i]+"</p>");
-      optionTwo.append(newOption);
-      }
-      
-  var choiceThree = [
-     "Tempo Cafe",
-     "A full menu is served around the clock & it's BYO booze until 10 PM.",
-    "Address: 6 E Chestnut St, Chicago, IL 60611"
-   ];
-   console.log(choiceThree);
-   var optionThree = $("#optionThree");
-    for(var i=0; i<choiceThree.length;i++){
-      var newOption = $("<p>"+choiceThree[i]+"</p>");
-      optionThree.append(newOption);
-      }
-  } 
 
     </script> -->
     <!-- <script src="assets/js/trip.js" type="text/javascipt"></script> -->

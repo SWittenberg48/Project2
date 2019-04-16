@@ -22,13 +22,13 @@ body{
     color:black;
 }
 #int{
-    height: 600px;
-    width: 600px;
+    height: 600px; width: 600px;
     background-color: white;
     border: solid;
     border-color: black;
     border-radius: 20px;
     margin-top: 20px; margin-left: 30%;
+    padding: 20px;
 
 }
 
