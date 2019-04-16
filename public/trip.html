@@ -61,7 +61,11 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+    </div>
+>>>>>>> master
     <!-- second radial -->
     <div class="col s12 m7">
       <label>
@@ -79,8 +83,13 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       
     <!-- working radial button -->
+=======
+    </div>
+    <!-- third radial button -->
+>>>>>>> master
     <div class="col s12 m7">
       <label>
         <input class="with-gap" name="group3" type="radio" />
@@ -110,6 +119,53 @@
     </div>
   
     <script>
+<<<<<<< HEAD
+=======
+      var currentCity = sessionStorage.getItem("city");
+      $.post(
+        "/yelp",
+        {
+          city: currentCity
+        },
+        function(userOptions) {
+          console.log(userOptions);
+        }
+      );
+      console.log(currentCity);
+      //  Function to display the First choices of their City Trip
+      function firstChoice() {
+        var choiceOne = [];
+        console.log(choiceOne);
+        var optionOne = $("#optionOne");
+        for (var i = 0; i < choiceOne.length; i++) {
+          var newOption = $("<p>" + choiceOne[i] + "</p>");
+          optionOne.append(newOption);
+        }
+
+        var choiceTwo = [
+          "Cloud Gate",
+          "Affectionately called, “The Bean” and what has become synonymous with the Chicago experience is Anish Kapoor’s Cloud Gate"
+        ];
+        console.log(choiceTwo);
+        var optionTwo = $("#optionTwo");
+        for (var i = 0; i < choiceTwo.length; i++) {
+          var newOption = $("<p>" + choiceTwo[i] + "</p>");
+          optionTwo.append(newOption);
+        }
+
+        var choiceThree = [
+          "Buckingham Fountain",
+          "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world"
+        ];
+        console.log(choiceThree);
+        var optionThree = $("#optionThree");
+        for (var i = 0; i < choiceThree.length; i++) {
+          var newOption = $("<p>" + choiceThree[i] + "</p>");
+          optionThree.append(newOption);
+        }
+      }
+      // firstChoice();
+>>>>>>> master
 
       // function to display the second options of their city trip.
       function secondChoice() {
@@ -166,14 +222,13 @@
         
         
 
-        //     $.ajax({
-        //    type:"POST",
-        //    url: "/save",
-        //    data: {userData}
-        //  }).then(function(data){
-        //    console.log("data");
-
-        //  })
+        $.ajax({
+          type: "POST",
+          url: "/save",
+          data: { userData }
+        }).then(function(data) {
+          console.log("data");
+        });
       });
     </script>
   </body>
