@@ -60,15 +60,6 @@
           </div>
         </div>
       </div>
-      <hr />
-      <button
-        class="btn waves-effect waves-light btn-large"
-        type="submit"
-        name="action"
-        id="user-choice"
-      >
-        Next
-      </button>
     </div>
     <!-- second radial -->
     <div class="col s12 m7">
@@ -87,17 +78,8 @@
           </div>
         </div>
       </div>
-      <hr />
-      <button
-        class="btn waves-effect waves-light btn-large"
-        type="submit"
-        name="action"
-        id="user-choice"
-      >
-        Next
-      </button>
     </div>
-    <!-- working radial button -->
+    <!-- third radial button -->
     <div class="col s12 m7">
       <label>
         <input class="with-gap" name="group3" type="radio" />
@@ -128,12 +110,7 @@
     <script>
       //  Function to display the First choices of their City Trip
       function firstChoice() {
-        var choiceOne = [
-          "Navy Pier",
-          "3,300-foot-long pier on the Chicago shoreline of Lake Michigan",
-          "It is located in the Streeterville neighborhood of the Near North Side community area.",
-          "Address: 600 E Grand Ave, Chicago, IL 60611"
-        ];
+        var choiceOne = [];
         console.log(choiceOne);
         var optionOne = $("#optionOne");
         for (var i = 0; i < choiceOne.length; i++) {
@@ -153,7 +130,7 @@
         }
 
         var choiceThree = [
-          "Bucktinham Fountain",
+          "Buckingham Fountain",
           "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world"
         ];
         console.log(choiceThree);
@@ -212,7 +189,7 @@
         var userData = $("input[type='radio']:checked")
           .parent()
           .parent()
-          .find("#optionThree")
+          .find(".dbInfo")
           .text();
 
         console.log(userData);
