@@ -1,144 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Trip Details</title>
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <!-- Compiled and minified JavaScript -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="assets/css/trip.css" />
-      <!-- <link rel="stylesheet" href="assets/css/animate.min.css" /> -->
-</head>
-<body>
-        <div class="navbar-fixed">
-                <nav>
-                  <div class="nav-wrapper teal lighten-2">
-                    <a href="index.html" class="brand-logo center">City Tripping</a>
-                    <ul class="right hide-on-med-and-down">
-                      <li><a href="login.html">Login</a></li>
-                    </ul>
-                  </div>
-                </nav>
-              </div>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/trip.css" />
+    <!-- <link rel="stylesheet" href="assets/css/animate.min.css" /> -->
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper teal lighten-2">
+          <a href="#!" class="brand-logo center">City Tripping</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div id="howToUse">
-      <p id="instruct">Building your City Trip is easy, just select one of the options below to add it to the itinerary.</p>
-    </div>          
-    <form id="events">
-        <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-                <div class="col s12 m7">
-                    <h5 class="header">First Choice</h5>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                        <div class="card-stacked">
-                          <div class="card-content">
-                            <p class="info" id="optionOne"></p>  
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-        <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h5 class="header">Second Choice</h5>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p class="info" id="optionTwo"></p>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-     <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h5 class="header">Third Choice </Option></h5>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p class="info" id="optionThree"></p>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>            
-    </form>
-    <a href="event.html"><button id="nextInfo" class="btn-floating btn-large pulse" type="submit" name="action">Next</button></a>
+      <p id="instruct">
+        Building your City Trip is easy, just select one of the options below to
+        add it to the itinerary.
+      </p>
+    </div>
+    <!-- first radial -->
+    <div class="col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option1">I like this</span>
+      </label>
+      <h4 class="header">Third Choice</h4>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionOne" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <button
+        class="btn waves-effect waves-light btn-large"
+        type="submit"
+        name="action"
+        id="user-choice"
+      >
+        Next
+      </button>
+    </div>
+    <!-- second radial -->
+    <div class="col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option2">I like this</span>
+      </label>
+      <h4 class="header">Third Choice</h4>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionTwo" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <button
+        class="btn waves-effect waves-light btn-large"
+        type="submit"
+        name="action"
+        id="user-choice"
+      >
+        Next
+      </button>
+    </div>
+    <!-- working radial button -->
+    <div class="col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option3">I like this</span>
+      </label>
+      <h4 class="header">Third Choice</h4>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionThree" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <button
+        class="btn waves-effect waves-light btn-large"
+        type="submit"
+        name="action"
+        id="user-choice"
+      >
+        Next
+      </button>
+    </div>
 
     <script>
-    $(document).ready(function(){
+      //  Function to display the First choices of their City Trip
+      function firstChoice() {
+        var choiceOne = [
+          "Navy Pier",
+          "3,300-foot-long pier on the Chicago shoreline of Lake Michigan",
+          "It is located in the Streeterville neighborhood of the Near North Side community area.",
+          "Address: 600 E Grand Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceOne);
+        var optionOne = $("#optionOne");
+        for (var i = 0; i < choiceOne.length; i++) {
+          var newOption = $("<p>" + choiceOne[i] + "</p>");
+          optionOne.append(newOption);
+        }
 
-       secondChoice();
+        var choiceTwo = [
+          "Cloud Gate",
+          "Affectionately called, “The Bean” and what has become synonymous with the Chicago experience is Anish Kapoor’s Cloud Gate"
+        ];
+        console.log(choiceTwo);
+        var optionTwo = $("#optionTwo");
+        for (var i = 0; i < choiceTwo.length; i++) {
+          var newOption = $("<p>" + choiceTwo[i] + "</p>");
+          optionTwo.append(newOption);
+        }
 
-});
-
-function secondChoice(){
-  var choiceOne = [
-    "Purple Pig",
-    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
-    "Address: 500 N Michigan Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceOne);
-   var optionOne = $("#optionOne");
-    for(var i=0; i<choiceOne.length;i++){
-      var newOption = $("<p>"+choiceOne[i]+"</p>");
-      optionOne.append(newOption);
+        var choiceThree = [
+          "Bucktinham Fountain",
+          "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world"
+        ];
+        console.log(choiceThree);
+        var optionThree = $("#optionThree");
+        for (var i = 0; i < choiceThree.length; i++) {
+          var newOption = $("<p>" + choiceThree[i] + "</p>");
+          optionThree.append(newOption);
+        }
       }
-  
-  var choiceTwo = [
-  "Gibson's Bar",
-    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
-    "Address: 1028 N Rush Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceTwo);
-   var optionTwo = $("#optionTwo");
-    for(var i=0; i<choiceTwo.length;i++){
-      var newOption = $("<p>"+choiceTwo[i]+"</p>");
-      optionTwo.append(newOption);
-      }
-      
-  var choiceThree = [
-     "Tempo Cafe",
-     "A full menu is served around the clock & it's BYO booze until 10 PM.",
-    "Address: 6 E Chestnut St, Chicago, IL 60611"
-   ];
-   console.log(choiceThree);
-   var optionThree = $("#optionThree");
-    for(var i=0; i<choiceThree.length;i++){
-      var newOption = $("<p>"+choiceThree[i]+"</p>");
-      optionThree.append(newOption);
-      }
-  }
-  
-  
+      // firstChoice();
 
-    </script> -->
-    <!-- <script src="assets/js/trip.js" type="text/javascipt"></script> -->
-   
-</body>
+      // function to display the second options of their city trip.
+      function secondChoice() {
+        var choiceOne = [
+          "Purple Pig",
+          "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+          "Address: 500 N Michigan Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceOne);
+        var optionOne = $("#optionOne");
+        for (var i = 0; i < choiceOne.length; i++) {
+          var newOption = $("<p>" + choiceOne[i] + "</p>");
+          optionOne.append(newOption);
+        }
+
+        var choiceTwo = [
+          "Gibson's Bar",
+          "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+          "Address: 1028 N Rush Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceTwo);
+        var optionTwo = $("#optionTwo");
+        for (var i = 0; i < choiceTwo.length; i++) {
+          var newOption = $("<p>" + choiceTwo[i] + "</p>");
+          optionTwo.append(newOption);
+        }
+
+        var choiceThree = [
+          "Tempo Cafe",
+          "A full menu is served around the clock & it's BYO booze until 10 PM.",
+          "Address: 6 E Chestnut St, Chicago, IL 60611"
+        ];
+        console.log(choiceThree);
+        var optionThree = $("#optionThree");
+        for (var i = 0; i < choiceThree.length; i++) {
+          var newOption = $("<p>" + choiceThree[i] + "</p>");
+          optionThree.append(newOption);
+        }
+      }
+      secondChoice();
+    </script>
+    <script>
+      //  instead of group1 #user-choice
+      $("#user-choice").on("click", function() {
+        //  alert("hello");
+        var userData = $("input[type='radio']:checked")
+          .parent()
+          .parent()
+          .find("#optionThree")
+          .text();
+
+        console.log(userData);
+
+        //     $.ajax({
+        //    type:"POST",
+        //    url: "/save",
+        //    data: {userData}
+        //  }).then(function(data){
+        //    console.log("data");
+
+        //  })
+      });
+    </script>
+  </body>
 </html>
