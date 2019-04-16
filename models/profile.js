@@ -1,18 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
   var Profile = sequelize.define("profile", {
-    firebase_id: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    event: {
+    image: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    restaurant: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    landmark: {
+    address: {
       type: DataTypes.STRING,
       allowNull: true
     }
