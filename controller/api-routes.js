@@ -17,11 +17,11 @@ module.exports = function(app) {
   //   if (!err) console.log("Site is live");
   //   else console.log(err);
   // });
-  app.post("/yelp", function(req, res) {
+  app.get("/yelp", function(req, res) {
     client
       .search({
-        location: currentCity,
-        limit: 3
+        location: "chicago, IL"
+        // limit: 3
       })
       .then(response => {
         // console.log(response.jsonBody.businesses[0]);
