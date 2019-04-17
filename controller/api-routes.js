@@ -13,11 +13,17 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.send("Welcome to Passport with Sequelize");
   });
+<<<<<<< HEAD
   // app.listen(5000, function(err) {
   //   if (!err) console.log("Site is live");
   //   else console.log(err);
   // });
   app.get("/yelp", function(req, res) {
+=======
+
+  app.post("/yelp", function(req, res) {
+    var currentCity = $("#tripAddress").val();
+>>>>>>> master
     client
       .search({
         location: "chicago, IL"
