@@ -28,69 +28,68 @@
     <div id="howToUse">
       <p id="instruct">Building your City Trip is easy, just select one of the options below to add it to the itinerary.</p>
     </div>          
-    <form id="events">
-        <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h4 class="header">First Choice</h4>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                        <p id="optionOne"></p>  
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-     <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h4 class="header">Second Choice</h4>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p id="optionTwo"></p>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-     <div>
-            <label>
-              <input class="with-gap" name="group3" type="radio" />
-              <span class="option3">I like this</span>
-            </label>  
-              <div class="col s12 m7">
-                    <h4 class="header">Third Choice </Option></h4>
-                    <div class="card horizontal">
-                      <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p id="optionThree"></p>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr> 
-                            
-    </form>
-    <a href="itinerary.html"><button id="nextInfo" class="btn waves-effect waves-light btn-large" type="submit" name="action">My Trip</button></a>
-
+    <div class="info col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option1">I like this</span>
+      </label>
+      <h5 class="header">First Choice</h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Round_Landmark_Icon_Mill.svg" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionOne" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second radial -->
+    <div class="info col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option2">I like this</span>
+      </label>
+      <h5 class="header">Second Choice</h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Round_Landmark_Icon_Mill.svg" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionTwo" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- third radial button -->
+    <div class="info col s12 m7">
+      <label>
+        <input class="with-gap" name="group3" type="radio" />
+        <span class="option3">I like this</span>
+      </label>
+      <h5 class="header">Third Choice</h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Round_Landmark_Icon_Mill.svg" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p id="optionThree" class="dbInfo"></p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <a href="itinerary.html"><button
+        class="btn-floating waves-light btn-large pulse"
+        type="submit"
+        name="action"
+        id="user-choice"
+      >
+        Next
+      </button></a>
+    </div>
     <script>
 
 $(document).ready(function(){
