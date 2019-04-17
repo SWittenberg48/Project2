@@ -3,10 +3,12 @@ const yelp = require("yelp-fusion");
 const client = yelp.client(
   "PQpBSBJotEo3KXypxURXJyK6iMjPU_hnPN6QAkM_KpBz9p1eWO8030JZStfBC979NYecXbi3uWiDlfGYcEuafEXwbI1eSu2lSi2J4RB8JfyX_9bWg-7O6zG_QmqvXHYx"
 );
+
 // var yelp = require("../services/yelpPackage");
 // console.log("hello", yelp);
 // yelp();
 // User Authentication Routes
+
 module.exports = function(app) {
   app.get("/", function(req, res) {
     res.send("Welcome to Passport with Sequelize");
@@ -15,23 +17,34 @@ module.exports = function(app) {
   //   if (!err) console.log("Site is live");
   //   else console.log(err);
   // });
-  app.get("/yelp", function(req, res) {
+  app.post("/yelp", function(req, res) {
     client
       .search({
-        location: "chicago"
+        location: currentCity,
+        limit: 3
       })
       .then(response => {
-        //   console.log(response.jsonBody.businesses[0]);
+        // console.log(response.jsonBody.businesses[0]);
         // return
-        var yelpData = response.jsonBody.businesses[0];
-        console.log(yelpData);
+        var userOptions = [];
 
-        // var yelpobj = {
-        //   name: yelpData.name,
-        //   img_url: yelpData.image_url
-        // };
-
-        // return "yelpData";
+        for (let i = 0; i < response.jsonBody.businesses.length; i++) {
+          var bizName = response.jsonBody.businesses[i].name;
+          var bizImg = response.jsonBody.businesses[i].image_url;
+          var bizSite = response.jsonBody.businesses[i].url;
+          var bizLocation = response.jsonBody.businesses[
+            i
+          ].location.display_address.join(" ");
+          var bizObj = {
+            name: bizName,
+            img: bizImg,
+            website: bizSite,
+            location: bizLocation
+          };
+          userOptions.push(bizObj);
+        }
+        console.log(userOptions);
+        res.json(userOptions);
       })
       .catch(e => {
         console.log(e);

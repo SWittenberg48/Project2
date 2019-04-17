@@ -65,7 +65,7 @@
           </div> -->
           <div class="col-2">
             <button id="doItYelp" type="button" class="btn btn-outline-light">
-              <i class="fas fa-search"><a href="trip.html"></i> Start
+              <i class="fas fa-search"></i> Start
               Tripping</a>
             </button>
           </div>
@@ -95,5 +95,23 @@
     <div class="footer navbar-fixed-bottom" id="footer">
       Built by Scott + Kyle + Dave + Stephen
     </div>
+    
+    <script>
+    let userCity= $('#doItYelp').on('click', function(){
+     var userCity = $('#tripAddress').val();
+      //Set
+
+      sessionStorage.setItem('city', userCity);  
+      
+      // var currentCity = sessionStorage.getItem('city')
+      const currentLocation = window.location.href
+      window.location.assign(currentLocation + "trip")
+      // console.log(currentCity)
+      // $.get("/trip")
+
+    });
+    
+
+    </script>
   </body>
 </html>
