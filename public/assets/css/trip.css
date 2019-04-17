@@ -29,16 +29,19 @@ body{
   color: black;
 }
 .header3{
-  color: white
+  color:black;
 }
 .option3{
-  color: white;
+  color:black;
 }
 .info{
-  margin-right: 40px; margin-left: 40px;
-  font-family: cursive;
+  margin-right: 40px; margin-left: 40px;font-family: cursive;
+  padding-top: 5px;padding-right: 40px;padding-bottom: 5;padding-left: 40px;
 
 }
 #user-choice{
   margin-left: 80px;
+}
+.card-image{margin: 20px;
+  height: 60px; width: 60px;
 }
