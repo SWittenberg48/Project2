@@ -50,3 +50,7 @@ body.initial {
 a {
   color: inherit;
 }
+.userHint{
+  font-size:  35px;
+  margin: 10px;
+}

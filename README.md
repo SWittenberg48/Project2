@@ -4,7 +4,7 @@ Start Tripping Today
 
 ## Live Preview
 
-- [City Tripping](https://thawing-depths-11355.herokuapp.com/)
+- [City Tripping](https://shielded-atoll-68884.herokuapp.com/)
 
 ## Authors
 

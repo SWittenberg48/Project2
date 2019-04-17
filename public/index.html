@@ -23,7 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!-- <link rel="stylesheet" href="assets/css/animate.min.css" /> -->
     <!-- Compiled and minified JavaScript -->
 
     <style>
@@ -38,13 +38,15 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper teal lighten-2">
-          <a href="#!" class="brand-logo center">City Tripping</a>
+          <a href="index.html" class="brand-logo center">City Tripping</a>
           <ul class="right hide-on-med-and-down">
             <li><a href="login.html">Login</a></li>
-            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
       </nav>
+    </div>
+    <div>
+      <h4>Search a city...take a Trip.</h4>
     </div>
 
     <div css="text-align:center">
@@ -64,13 +66,17 @@
             >
           </div> -->
           <div class="col-2">
-            <a href="trip.html"><button id="doItYelp" type="button" class="btn btn-outline-light">
-              <i class="fas fa-search"></i> Start
-              Tripping
-            </button></a>
+            <button id="doItYelp" type="button" class="btn btn-outline-light">
+              <i class="fas fa-search"><a href="trip.html"></i> Start
+              Tripping</a>
+            </button>
           </div>
         </div>
       </form>
+    </div>
+    <div class="userHint">
+      <p>Create a custom itinerary for a day trip into the City!</p> 
+      <p>Which City is up to you...</p>
     </div>
     <!-- <div id="start">
       <a class="waves-effect waves-light btn-large">Get Ready to Take a Trip</a>
@@ -95,23 +101,5 @@
     <div class="footer navbar-fixed-bottom" id="footer">
       Built by Scott + Kyle + Dave + Stephen
     </div>
-    
-    <script>
-    let userCity= $('#doItYelp').on('click', function(){
-     var userCity = $('#tripAddress').val();
-      //Set
-
-      sessionStorage.setItem('city', userCity);  
-      
-      // var currentCity = sessionStorage.getItem('city')
-      const currentLocation = window.location.href
-      window.location.assign(currentLocation + "trip")
-      // console.log(currentCity)
-      // $.get("/trip")
-
-    });
-    
-
-    </script>
   </body>
 </html>

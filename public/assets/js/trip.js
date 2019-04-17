@@ -10,9 +10,7 @@ function displayOptions(){
   // When user makes a selection and click "Next" button we store that data in the DB for their first choice. 
   // Then clear out data from choice variables, list 3 new Event options. Repeat process same as above, then do it one last time for Landmarks.$
   // After 3 selections are made bump over itinerary  HTML and pull the data we stored in the DB to populate the page. 
-$("#next").click(secondChoice(){
-    alert(" has been clicked.");
-});
+
   var choiceOne = [
     // this is where NPM data should go for choiceOne
    ];

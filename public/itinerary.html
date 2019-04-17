@@ -53,7 +53,7 @@
                 <div class="list__border"></div> -->
                 <div class="list__desc">
                   <h2>Lunch</h2>
-                  <h3>Girl & The Goat</h3>
+                  <h3>Purple Pig</h3>
                   <h3>Address: 809 W Randolph St, Chicago, IL 60607</h3>
                   
                 </div>
@@ -86,9 +86,46 @@
     </div>
 
     <script>
-      $(document).ready(function() {
-        displayOptions();
-      });
+    $(document).ready(function(){
+       displayOptions();
+});
+function displayOptions(){
+  var choiceOne = [
+    "Purple Pig",
+    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+    "Address: 500 N Michigan Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceOne);
+   var userTrip = $("#int");
+    for(var i=0; i<choiceOne.length;i++){
+      var newOption = $("<div>"+choiceOne[i]+"</div>");
+      userTrip.append(newOption);
+      }
+  
+  var choiceTwo = [
+   "Gibson's Bar",
+    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+    "Address: 1028 N Rush Ave, Chicago, IL 60611"
+   ];
+   console.log(choiceTwo);
+   var userTrip = $("#int");
+    for(var i=0; i<choiceTwo.length;i++){
+      var newOption = $("<div>"+choiceTwo[i]+"</div>");
+      userTrip.append(newOption);
+      }
+      
+  // var choiceThree = [
+  //    "Tempo Cafe",
+  //    "A full menu is served around the clock & it's BYO booze until 10 PM.",
+  //   "Address: 6 E Chestnut St, Chicago, IL 60611"
+  //  ];
+  //  console.log(choiceThree);
+  //  var optionThree = $("#optionThree");
+  //   for(var i=0; i<choiceThree.length;i++){
+  //     var newOption = $("<p>"+choiceThree[i]+"</p>");
+  //     optionThree.append(newOption);
+  //     }
+  } 
     </script>
     <!-- <script src="assets/js/trip.js" type="text/javascipt"></script> -->
   </body>

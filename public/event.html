@@ -81,99 +81,83 @@
         </div>
       </div>
       <hr />
-      <a href="itinerary.html"><button
-        class="btn-floating waves-light btn-large pulse"
+      <a href="itinerary.html">
+      <button
+        class="btn-floating btn-large pulse"
         type="submit"
         name="action"
         id="user-choice"
       >
-        Next
+        Trip
       </button></a>
     </div>
+  
     <script>
 
-$(document).ready(function(){
-       thirdChoice();
-});
+      // function to display the second options of their city trip.
+      function secondChoice() {
+        var choiceOne = [
+          "Purple Pig",
+          "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
+          "Address: 500 N Michigan Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceOne);
+        var optionOne = $("#optionOne");
+        for (var i = 0; i < choiceOne.length; i++) {
+          var newOption = $("<p>" + choiceOne[i] + "</p>");
+          optionOne.append(newOption);
+        }
 
-function secondChoice(){
-  var choiceOne = [
-    "Purple Pig",
-    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
-    "Address: 500 N Michigan Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceOne);
-   var optionOne = $("#optionOne");
-    for(var i=0; i<choiceOne.length;i++){
-      var newOption = $("<p>"+choiceOne[i]+"</p>");
-      optionOne.append(newOption);
-      }
-  
-  var choiceTwo = [
-  "Gibson's Bar",
-    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
-    "Address: 1028 N Rush Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceTwo);
-   var optionTwo = $("#optionTwo");
-    for(var i=0; i<choiceTwo.length;i++){
-      var newOption = $("<p>"+choiceTwo[i]+"</p>");
-      optionTwo.append(newOption);
-      }
-      
-  var choiceThree = [
-     "Tempo Cafe",
-     "A full menu is served around the clock & it's BYO booze until 10 PM.",
-    "Address: 6 E Chestnut St, Chicago, IL 60611"
-   ];
-   console.log(choiceThree);
-   var optionThree = $("#optionThree");
-    for(var i=0; i<choiceThree.length;i++){
-      var newOption = $("<p>"+choiceThree[i]+"</p>");
-      optionThree.append(newOption);
-      }
-  }
-  
-  function thirdChoice(){
-  var choiceOne = [
-    "Navy Pier",
-    "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
-    "Address: 500 N Michigan Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceOne);
-   var optionOne = $("#optionOne");
-    for(var i=0; i<choiceOne.length;i++){
-      var newOption = $("<p>"+choiceOne[i]+"</p>");
-      optionOne.append(newOption);
-      }
-  
-  var choiceTwo = [
-  "Cloud Gate",
-    "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
-    "Address: 1028 N Rush Ave, Chicago, IL 60611"
-   ];
-   console.log(choiceTwo);
-   var optionTwo = $("#optionTwo");
-    for(var i=0; i<choiceTwo.length;i++){
-      var newOption = $("<p>"+choiceTwo[i]+"</p>");
-      optionTwo.append(newOption);
-      }
-      
-  var choiceThree = [
-     "Willis Tower",
-     "A full menu is served around the clock & it's BYO booze until 10 PM.",
-    "Address: 6 E Chestnut St, Chicago, IL 60611"
-   ];
-   console.log(choiceThree);
-   var optionThree = $("#optionThree");
-    for(var i=0; i<choiceThree.length;i++){
-      var newOption = $("<p>"+choiceThree[i]+"</p>");
-      optionThree.append(newOption);
-      }
-  } 
+        var choiceTwo = [
+          "Gibson's Bar",
+          "Classic fare comes with a side of people-watching at the original location of the chophouse chain.",
+          "Address: 1028 N Rush Ave, Chicago, IL 60611"
+        ];
+        console.log(choiceTwo);
+        var optionTwo = $("#optionTwo");
+        for (var i = 0; i < choiceTwo.length; i++) {
+          var newOption = $("<p>" + choiceTwo[i] + "</p>");
+          optionTwo.append(newOption);
+        }
 
+        var choiceThree = [
+          "Tempo Cafe",
+          "A full menu is served around the clock & it's BYO booze until 10 PM.",
+          "Address: 6 E Chestnut St, Chicago, IL 60611"
+        ];
+        console.log(choiceThree);
+        var optionThree = $("#optionThree");
+        for (var i = 0; i < choiceThree.length; i++) {
+          var newOption = $("<p>" + choiceThree[i] + "</p>");
+          optionThree.append(newOption);
+        }
+      }
+      secondChoice();
     </script>
-    <!-- <script src="assets/js/trip.js" type="text/javascipt"></script> -->
-   
-</body>
+    <script>
+      //  instead of group1 #user-choice
+      $("#user-choice").on("click", function() {
+        //  alert("hello");
+        var userData = $("input[type='radio']:checked")
+          .parent()
+          .parent()
+          .find(".dbInfo")
+          .text();
+        
+        
+        console.log(userData);
+        
+        
+
+        //     $.ajax({
+        //    type:"POST",
+        //    url: "/save",
+        //    data: {userData}
+        //  }).then(function(data){
+        //    console.log("data");
+
+        //  })
+      });
+    </script>
+  </body>
 </html>

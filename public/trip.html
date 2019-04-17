@@ -43,6 +43,7 @@
         add it to the itinerary.
       </p>
     </div>
+  
     <!-- first radial -->
     <div class="info col s12 m7">
       <label>
@@ -97,8 +98,9 @@
         </div>
       </div>
       <hr />
-      <a href="event.html"><button
-        class="btn-floating waves-light btn-large pulse"
+      <a href="event.html">
+      <button
+        class="btn-floating btn-large pulse"
         type="submit"
         name="action"
         id="user-choice"
@@ -106,55 +108,22 @@
         Next
       </button></a>
     </div>
-
+  
     <script>
-      var currentCity = sessionStorage.getItem("city");
-      $.post(
-        "/yelp",
-        {
-          city: currentCity
-        },
-        function(userOptions) {
-          console.log(userOptions);
-        }
-      );
-      console.log(currentCity);
-      //  Function to display the First choices of their City Trip
+      // var currentCity = sessionStorage.getItem("city");
+      // $.post(
+      //   "/yelp",
+      //   {
+      //     city: currentCity
+      //   },
+      //   function(userOptions) {
+      //     console.log(userOptions);
+      //   }
+      // );
+      // console.log(currentCity);
+      
+      // function to display the First option of their city trip.
       function firstChoice() {
-        var choiceOne = [];
-        console.log(choiceOne);
-        var optionOne = $("#optionOne");
-        for (var i = 0; i < choiceOne.length; i++) {
-          var newOption = $("<p>" + choiceOne[i] + "</p>");
-          optionOne.append(newOption);
-        }
-
-        var choiceTwo = [
-          "Cloud Gate",
-          "Affectionately called, “The Bean” and what has become synonymous with the Chicago experience is Anish Kapoor’s Cloud Gate"
-        ];
-        console.log(choiceTwo);
-        var optionTwo = $("#optionTwo");
-        for (var i = 0; i < choiceTwo.length; i++) {
-          var newOption = $("<p>" + choiceTwo[i] + "</p>");
-          optionTwo.append(newOption);
-        }
-
-        var choiceThree = [
-          "Buckingham Fountain",
-          "Buckingham Fountain is a Chicago landmark in the center of Grant Park. Dedicated in 1927, it is one of the largest fountains in the world"
-        ];
-        console.log(choiceThree);
-        var optionThree = $("#optionThree");
-        for (var i = 0; i < choiceThree.length; i++) {
-          var newOption = $("<p>" + choiceThree[i] + "</p>");
-          optionThree.append(newOption);
-        }
-      }
-      // firstChoice();
-
-      // function to display the second options of their city trip.
-      function secondChoice() {
         var choiceOne = [
           "Purple Pig",
           "Adventurous small plates plus house-cured meats & a lengthy wine list in small, lively quarters.",
@@ -191,7 +160,7 @@
           optionThree.append(newOption);
         }
       }
-      secondChoice();
+      firstChoice();
     </script>
     <script>
       //  instead of group1 #user-choice
@@ -202,16 +171,19 @@
           .parent()
           .find(".dbInfo")
           .text();
-
+        
+        
         console.log(userData);
+        
+        
 
-        $.ajax({
-          type: "POST",
-          url: "/save",
-          data: { userData }
-        }).then(function(data) {
-          console.log("data");
-        });
+      //   $.ajax({
+      //     type: "POST",
+      //     url: "/save",
+      //     data: { userData }
+      //   }).then(function(data) {
+      //     console.log("data");
+      //   });
       });
     </script>
   </body>
