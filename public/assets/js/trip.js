@@ -1,7 +1,7 @@
 var firstChoice = [];
 var secondChoice = [];
 var thirdChoice = [];
-
+userChoices = document.getElementById('userChoices'),
     
     //  Function to display the First choices of their City Trip
 function displayOptions(){

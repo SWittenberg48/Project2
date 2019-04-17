@@ -4,30 +4,31 @@ html {
   min-height: 100%;
 }
 
-body{
+body {
   background-image: url(../images/skylineChicago.jpg);
-  /* height: 100%; */
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   /* color: white; */
   font-family: "Pacifico", cursive;
 }
-#howToUse{
-    margin-top: 10px; margin-left: 15%;
+#howToUse {
+  margin-top: 10px;
+  margin-left: 15%;
 }
-#instruct{
-    font-size: 24px;
-    font-weight: bold;
-    color:black;
+#instruct {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
 }
-#events{
+#events {
   margin: 50px;
 }
 
-.option{
-    color: black;
+.option {
+  color: black;
 }
-.option3{
-    color:white;
+.option3 {
+  color: white;
 }
